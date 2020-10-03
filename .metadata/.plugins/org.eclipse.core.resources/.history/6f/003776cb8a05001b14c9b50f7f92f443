@@ -1,0 +1,19 @@
+	.syntax unified
+	.cpu cortex-m4
+	.thumb
+
+.data
+	result: .byte 0
+.text
+.global main
+	.equ N, 20
+
+main:
+	movs R0, #N
+	bl fib
+
+L:  b L
+
+fib:
+
+	bx lr
