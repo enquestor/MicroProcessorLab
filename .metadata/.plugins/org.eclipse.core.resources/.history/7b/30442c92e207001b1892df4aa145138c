@@ -4,8 +4,8 @@
 
 .data
 	result: .byte 0
-	X: .word 0x55AA
-	Y: .word 0xAA55
+	X: .word 55AA
+	Y: .word AA55
 .text
 .global main
 	#.equ X, 0xAB

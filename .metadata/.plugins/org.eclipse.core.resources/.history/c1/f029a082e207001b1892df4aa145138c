@@ -4,12 +4,10 @@
 
 .data
 	result: .byte 0
-	X: .word 0x55AA
-	Y: .word 0xAA55
 .text
 .global main
-	#.equ X, 0xAB
-	#.equ Y, 0xCD
+	.equ X, 0xAB
+	.equ Y, 0xCD
 
 main:
 	movs R0, #X

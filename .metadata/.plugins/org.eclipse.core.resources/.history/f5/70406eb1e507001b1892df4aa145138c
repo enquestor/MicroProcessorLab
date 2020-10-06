@@ -35,7 +35,7 @@ loopb:
 	ldrb R4, [R0, R6]
 
 	cmp R3, R4
-	bge noswap
+	ble noswap
 	strb R4, [R0, R2]
 	strb R3, [R0, R6]
 noswap:

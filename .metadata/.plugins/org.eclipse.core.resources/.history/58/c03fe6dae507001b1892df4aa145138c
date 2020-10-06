@@ -8,12 +8,11 @@
 
 main:
 	movs R0, #N
-
 	cmp R0, #0
 	IT LT
 	movlt R4, #-1
-	blt L
 
+	blt L
 	cmp R0, #100
 	IT GT
 	movgt R4, #-1
