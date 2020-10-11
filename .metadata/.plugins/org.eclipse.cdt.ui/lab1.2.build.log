@@ -1,4 +1,4 @@
-22:56:55 **** Incremental Build of configuration Debug for project lab1.2 ****
+16:33:07 **** Incremental Build of configuration Debug for project lab1.2 ****
 make -j11 all 
 Building file: ../src/main.s
 Invoking: MCU GCC Assembler
@@ -19,5 +19,5 @@ arm-none-eabi-size "lab1.2.elf"
    1016	   1088	   1088	   3192	    c78	lab1.2.elf
  
 
-22:56:55 Build Finished (took 209ms)
+16:33:07 Build Finished (took 372ms)
 

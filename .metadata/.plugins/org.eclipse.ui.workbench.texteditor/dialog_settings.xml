@@ -9,6 +9,7 @@
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
 			<item value="main"/>
+			<item value="main.s"/>
 		</list>
 		<list key="replacehistory">
 		</list>

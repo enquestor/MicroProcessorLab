@@ -4,7 +4,7 @@
 
 .text
 .global main
-	.equ N, 101
+	.equ N, -3
 
 main:
 	movs R0, #N

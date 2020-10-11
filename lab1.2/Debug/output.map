@@ -249,142 +249,142 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x0000000008000188                . = ALIGN (0x8)
  *(.text)
  .text          0x0000000008000188       0x40 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
- .text          0x00000000080001c8       0x54 src/main.o
+ .text          0x00000000080001c8       0x56 src/main.o
                 0x00000000080001c8                main
  *(.text*)
+ *fill*         0x000000000800021e        0x2 
  .text.Reset_Handler
-                0x000000000800021c       0x50 startup/startup_stm32.o
-                0x000000000800021c                Reset_Handler
+                0x0000000008000220       0x50 startup/startup_stm32.o
+                0x0000000008000220                Reset_Handler
  .text.Default_Handler
-                0x000000000800026c        0x2 startup/startup_stm32.o
-                0x000000000800026c                TIM1_BRK_TIM15_IRQHandler
-                0x000000000800026c                TIM8_TRG_COM_IRQHandler
-                0x000000000800026c                TIM8_CC_IRQHandler
-                0x000000000800026c                DebugMon_Handler
-                0x000000000800026c                DMA1_CH4_IRQHandler
-                0x000000000800026c                TIM1_CC_IRQHandler
-                0x000000000800026c                TSC_IRQHandler
-                0x000000000800026c                HardFault_Handler
-                0x000000000800026c                SysTick_Handler
-                0x000000000800026c                TAMP_STAMP_IRQHandler
-                0x000000000800026c                PendSV_Handler
-                0x000000000800026c                NMI_Handler
-                0x000000000800026c                EXTI3_IRQHandler
-                0x000000000800026c                LPTIM2_IRQHandler
-                0x000000000800026c                DFSDM1_FLT1_IRQHandler
-                0x000000000800026c                I2C3_ER_IRQHandler
-                0x000000000800026c                DFSDM1_FLT2_IRQHandler
-                0x000000000800026c                TIM6_DACUNDER_IRQHandler
-                0x000000000800026c                EXTI0_IRQHandler
-                0x000000000800026c                I2C2_EV_IRQHandler
-                0x000000000800026c                DMA2_CH1_IRQHandler
-                0x000000000800026c                CAN1_RX0_IRQHandler
-                0x000000000800026c                FPU_IRQHandler
-                0x000000000800026c                TIM1_UP_TIM16_IRQHandler
-                0x000000000800026c                DMA2_CH7_IRQHandler
-                0x000000000800026c                UsageFault_Handler
-                0x000000000800026c                ADC1_2_IRQHandler
-                0x000000000800026c                SPI1_IRQHandler
-                0x000000000800026c                DMA1_CH7_IRQHandler
-                0x000000000800026c                TIM8_UP_IRQHandler
-                0x000000000800026c                RTC_ALARM_IRQHandler
-                0x000000000800026c                SAI2_IRQHandler
-                0x000000000800026c                DFSDM1_FLT3_IRQHandler
-                0x000000000800026c                DMA1_CH6_IRQHandler
-                0x000000000800026c                USART3_IRQHandler
-                0x000000000800026c                CAN1_RX1_IRQHandler
-                0x000000000800026c                LCD_IRQHandler
-                0x000000000800026c                UART5_IRQHandler
-                0x000000000800026c                ADC3_IRQHandler
-                0x000000000800026c                TIM4_IRQHandler
-                0x000000000800026c                QUADSPI_IRQHandler
-                0x000000000800026c                I2C1_EV_IRQHandler
-                0x000000000800026c                DMA2_CH5_IRQHandler
-                0x000000000800026c                UART4_IRQHandler
-                0x000000000800026c                DMA1_CH3_IRQHandler
-                0x000000000800026c                TIM3_IRQHandler
-                0x000000000800026c                RCC_IRQHandler
-                0x000000000800026c                Default_Handler
-                0x000000000800026c                EXTI15_10_IRQHandler
-                0x000000000800026c                TIM7_IRQHandler
-                0x000000000800026c                SDMMC1_IRQHandler
-                0x000000000800026c                TIM5_IRQHandler
-                0x000000000800026c                I2C3_EV_IRQHandler
-                0x000000000800026c                EXTI9_5_IRQHandler
-                0x000000000800026c                DMA1_CH2_IRQHandler
-                0x000000000800026c                RTC_WKUP_IRQHandler
-                0x000000000800026c                PVD_PVM_IRQHandler
-                0x000000000800026c                SPI2_IRQHandler
-                0x000000000800026c                DMA1_CH1_IRQHandler
-                0x000000000800026c                MemManage_Handler
-                0x000000000800026c                CAN1_TX_IRQHandler
-                0x000000000800026c                SVC_Handler
-                0x000000000800026c                EXTI4_IRQHandler
-                0x000000000800026c                RNG_IRQHandler
-                0x000000000800026c                TIM1_TRG_COM_TIM17_IRQHandler
-                0x000000000800026c                COMP_IRQHandler
-                0x000000000800026c                WWDG_IRQHandler
-                0x000000000800026c                LPUART1_IRQHandler
-                0x000000000800026c                TIM2_IRQHandler
-                0x000000000800026c                EXTI1_IRQHandler
-                0x000000000800026c                AES_IRQHandler
-                0x000000000800026c                USART2_IRQHandler
-                0x000000000800026c                DFSDM1_FLT0_IRQHandler
-                0x000000000800026c                I2C2_ER_IRQHandler
-                0x000000000800026c                TIM8_BRK_IRQHandler
-                0x000000000800026c                CAN1_SCE_IRQHandler
-                0x000000000800026c                FLASH_IRQHandler
-                0x000000000800026c                BusFault_Handler
-                0x000000000800026c                USART1_IRQHandler
-                0x000000000800026c                OTG_FS_IRQHandler
-                0x000000000800026c                SPI3_IRQHandler
-                0x000000000800026c                DMA2_CH6_IRQHandler
-                0x000000000800026c                DMA2_CH3_IRQHandler
-                0x000000000800026c                DMA2_CH2_IRQHandler
-                0x000000000800026c                I2C1_ER_IRQHandler
-                0x000000000800026c                FMC_IRQHandler
-                0x000000000800026c                DMA1_CH5_IRQHandler
-                0x000000000800026c                DMA2_CH4_IRQHandler
-                0x000000000800026c                SWPMI1_IRQHandler
-                0x000000000800026c                LPTIM1_IRQHandler
-                0x000000000800026c                SAI1_IRQHandler
-                0x000000000800026c                EXTI2_IRQHandler
- *fill*         0x000000000800026e        0x2 
+                0x0000000008000270        0x2 startup/startup_stm32.o
+                0x0000000008000270                TIM1_BRK_TIM15_IRQHandler
+                0x0000000008000270                TIM8_TRG_COM_IRQHandler
+                0x0000000008000270                TIM8_CC_IRQHandler
+                0x0000000008000270                DebugMon_Handler
+                0x0000000008000270                DMA1_CH4_IRQHandler
+                0x0000000008000270                TIM1_CC_IRQHandler
+                0x0000000008000270                TSC_IRQHandler
+                0x0000000008000270                HardFault_Handler
+                0x0000000008000270                SysTick_Handler
+                0x0000000008000270                TAMP_STAMP_IRQHandler
+                0x0000000008000270                PendSV_Handler
+                0x0000000008000270                NMI_Handler
+                0x0000000008000270                EXTI3_IRQHandler
+                0x0000000008000270                LPTIM2_IRQHandler
+                0x0000000008000270                DFSDM1_FLT1_IRQHandler
+                0x0000000008000270                I2C3_ER_IRQHandler
+                0x0000000008000270                DFSDM1_FLT2_IRQHandler
+                0x0000000008000270                TIM6_DACUNDER_IRQHandler
+                0x0000000008000270                EXTI0_IRQHandler
+                0x0000000008000270                I2C2_EV_IRQHandler
+                0x0000000008000270                DMA2_CH1_IRQHandler
+                0x0000000008000270                CAN1_RX0_IRQHandler
+                0x0000000008000270                FPU_IRQHandler
+                0x0000000008000270                TIM1_UP_TIM16_IRQHandler
+                0x0000000008000270                DMA2_CH7_IRQHandler
+                0x0000000008000270                UsageFault_Handler
+                0x0000000008000270                ADC1_2_IRQHandler
+                0x0000000008000270                SPI1_IRQHandler
+                0x0000000008000270                DMA1_CH7_IRQHandler
+                0x0000000008000270                TIM8_UP_IRQHandler
+                0x0000000008000270                RTC_ALARM_IRQHandler
+                0x0000000008000270                SAI2_IRQHandler
+                0x0000000008000270                DFSDM1_FLT3_IRQHandler
+                0x0000000008000270                DMA1_CH6_IRQHandler
+                0x0000000008000270                USART3_IRQHandler
+                0x0000000008000270                CAN1_RX1_IRQHandler
+                0x0000000008000270                LCD_IRQHandler
+                0x0000000008000270                UART5_IRQHandler
+                0x0000000008000270                ADC3_IRQHandler
+                0x0000000008000270                TIM4_IRQHandler
+                0x0000000008000270                QUADSPI_IRQHandler
+                0x0000000008000270                I2C1_EV_IRQHandler
+                0x0000000008000270                DMA2_CH5_IRQHandler
+                0x0000000008000270                UART4_IRQHandler
+                0x0000000008000270                DMA1_CH3_IRQHandler
+                0x0000000008000270                TIM3_IRQHandler
+                0x0000000008000270                RCC_IRQHandler
+                0x0000000008000270                Default_Handler
+                0x0000000008000270                EXTI15_10_IRQHandler
+                0x0000000008000270                TIM7_IRQHandler
+                0x0000000008000270                SDMMC1_IRQHandler
+                0x0000000008000270                TIM5_IRQHandler
+                0x0000000008000270                I2C3_EV_IRQHandler
+                0x0000000008000270                EXTI9_5_IRQHandler
+                0x0000000008000270                DMA1_CH2_IRQHandler
+                0x0000000008000270                RTC_WKUP_IRQHandler
+                0x0000000008000270                PVD_PVM_IRQHandler
+                0x0000000008000270                SPI2_IRQHandler
+                0x0000000008000270                DMA1_CH1_IRQHandler
+                0x0000000008000270                MemManage_Handler
+                0x0000000008000270                CAN1_TX_IRQHandler
+                0x0000000008000270                SVC_Handler
+                0x0000000008000270                EXTI4_IRQHandler
+                0x0000000008000270                RNG_IRQHandler
+                0x0000000008000270                TIM1_TRG_COM_TIM17_IRQHandler
+                0x0000000008000270                COMP_IRQHandler
+                0x0000000008000270                WWDG_IRQHandler
+                0x0000000008000270                LPUART1_IRQHandler
+                0x0000000008000270                TIM2_IRQHandler
+                0x0000000008000270                EXTI1_IRQHandler
+                0x0000000008000270                AES_IRQHandler
+                0x0000000008000270                USART2_IRQHandler
+                0x0000000008000270                DFSDM1_FLT0_IRQHandler
+                0x0000000008000270                I2C2_ER_IRQHandler
+                0x0000000008000270                TIM8_BRK_IRQHandler
+                0x0000000008000270                CAN1_SCE_IRQHandler
+                0x0000000008000270                FLASH_IRQHandler
+                0x0000000008000270                BusFault_Handler
+                0x0000000008000270                USART1_IRQHandler
+                0x0000000008000270                OTG_FS_IRQHandler
+                0x0000000008000270                SPI3_IRQHandler
+                0x0000000008000270                DMA2_CH6_IRQHandler
+                0x0000000008000270                DMA2_CH3_IRQHandler
+                0x0000000008000270                DMA2_CH2_IRQHandler
+                0x0000000008000270                I2C1_ER_IRQHandler
+                0x0000000008000270                FMC_IRQHandler
+                0x0000000008000270                DMA1_CH5_IRQHandler
+                0x0000000008000270                DMA2_CH4_IRQHandler
+                0x0000000008000270                SWPMI1_IRQHandler
+                0x0000000008000270                LPTIM1_IRQHandler
+                0x0000000008000270                SAI1_IRQHandler
+                0x0000000008000270                EXTI2_IRQHandler
+ *fill*         0x0000000008000272        0x2 
  .text.__libc_init_array
-                0x0000000008000270       0x48 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
-                0x0000000008000270                __libc_init_array
+                0x0000000008000274       0x48 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+                0x0000000008000274                __libc_init_array
  .text.startup.register_fini
-                0x00000000080002b8       0x14 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x00000000080002cc        0xc /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
-                0x00000000080002cc                atexit
+                0x00000000080002bc       0x14 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x00000000080002d0        0xc /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+                0x00000000080002d0                atexit
  .text.__libc_fini_array
-                0x00000000080002d8       0x34 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
-                0x00000000080002d8                __libc_fini_array
+                0x00000000080002dc       0x34 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+                0x00000000080002dc                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x000000000800030c        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
-                0x000000000800030c                __retarget_lock_acquire_recursive
- .text.__retarget_lock_release_recursive
                 0x0000000008000310        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
-                0x0000000008000310                __retarget_lock_release_recursive
+                0x0000000008000310                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x0000000008000314        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x0000000008000314                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x0000000008000314       0xc0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
-                0x0000000008000314                __register_exitproc
+                0x0000000008000318       0xc0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+                0x0000000008000318                __register_exitproc
  *(.glue_7)
- .glue_7        0x00000000080003d4        0x0 linker stubs
+ .glue_7        0x00000000080003d8        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080003d4        0x0 linker stubs
+ .glue_7t       0x00000000080003d8        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00000000080003d4        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .eh_frame      0x00000000080003d8        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.init)
- .init          0x00000000080003d4        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x00000000080003d4                _init
- .init          0x00000000080003d8        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .init          0x00000000080003d8        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x00000000080003d8                _init
+ .init          0x00000000080003dc        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
  *(.fini)
- .fini          0x00000000080003e0        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x00000000080003e0                _fini
- .fini          0x00000000080003e4        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .fini          0x00000000080003e4        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x00000000080003e4                _fini
+ .fini          0x00000000080003e8        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
                 0x00000000080003f0                . = ALIGN (0x8)
- *fill*         0x00000000080003ec        0x4 
                 0x00000000080003f0                _etext = .
 
 .vfp11_veneer   0x00000000080003f0        0x0

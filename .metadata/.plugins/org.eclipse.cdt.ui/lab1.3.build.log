@@ -1,6 +1,16 @@
-23:08:28 **** Incremental Build of configuration Debug for project lab1.3 ****
+22:09:20 **** Incremental Build of configuration Debug for project lab1.3 ****
 make -j11 all 
-make: Nothing to be done for `all'.
+../src/main.s: Assembler messages:
+Building file: ../src/main.s
+../src/main.s:54: Error: ARM register expected -- `mul R3,R3,#2'
+Invoking: MCU GCC Assembler
+../src/main.s:81: Error: garbage following instruction -- `it LT,GE'
+../src/main.s:82: Error: thumb conditional instruction should be in IT block -- `neglt R4,R4'
+../src/main.s:83: Error: thumb conditional instruction should be in IT block -- `movlt R5,R0'
+../src/main.s:84: Error: thumb conditional instruction should be in IT block -- `movge R5,R1'
+make: *** [src/main.o] Error 1
+/Users/yagami/School/MicroProcessor/lab1.3/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
 
-23:08:28 Build Finished (took 143ms)
+22:09:20 Build Finished (took 164ms)
 

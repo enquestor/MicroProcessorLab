@@ -1,4 +1,4 @@
-00:42:07 **** Build of configuration Debug for project lab1.3 ****
+08:46:32 **** Build of configuration Debug for project lab2.2 ****
 make -j11 all 
 Building file: ../startup/startup_stm32.s
 Building file: ../startup/sysmem.c
@@ -6,11 +6,11 @@ Building file: ../src/main.s
 Invoking: MCU GCC Assembler
 Invoking: MCU GCC Compiler
 Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
 arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
 arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
 Finished building: ../src/main.s
 Finished building: ../startup/startup_stm32.s
@@ -18,301 +18,699 @@ Finished building: ../startup/startup_stm32.s
  
 Finished building: ../startup/sysmem.c
  
-Building target: lab1.3.elf
+Building target: lab2.2.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
  
 /Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
 Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
    text	   data	    bss	    dec	    hex	filename
-    952	   1104	   1088	   3144	    c48	lab1.3.elf
+    960	   1240	   1088	   3288	    cd8	lab2.2.elf
  
-00:42:10 **** Incremental Build of configuration Debug for project lab1.3 ****
+08:46:35 **** Incremental Build of configuration Debug for project lab2.2 ****
 make -j11 all 
 make: Nothing to be done for `all'.
-00:58:30 **** Incremental Build of configuration Debug for project lab1.3 ****
+09:00:21 **** Incremental Build of configuration Debug for project lab2.2 ****
 make -j11 all 
 Building file: ../src/main.s
 Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-../src/main.s: Assembler messages:
-../src/main.s:14: Error: undefined symbol r0 used as an immediate value
-make: *** [src/main.o] Error 1
-00:58:49 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-../src/main.s: Assembler messages:
-../src/main.s:14: Error: undefined symbol r0 used as an immediate value
-make: *** [src/main.o] Error 1
-00:59:50 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-../src/main.s: Assembler messages:
-../src/main.s:14: Error: undefined symbol R0 used as an immediate value
-make: *** [src/main.o] Error 1
-01:00:01 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-../src/main.s: Assembler messages:
-../src/main.s:14: Error: undefined symbol R0 used as an immediate value
-make: *** [src/main.o] Error 1
-01:01:08 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
 arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
 Finished building: ../src/main.s
  
-Building target: lab1.3.elf
+Building target: lab2.2.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
  
 /Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
 Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
    text	   data	    bss	    dec	    hex	filename
-    944	   1104	   1088	   3136	    c40	lab1.3.elf
+    960	   1240	   1088	   3288	    cd8	lab2.2.elf
  
-01:02:15 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-    944	   1104	   1088	   3136	    c40	lab1.3.elf
- 
-01:06:40 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-    944	   1104	   1088	   3136	    c40	lab1.3.elf
- 
-01:06:49 **** Incremental Build of configuration Debug for project lab1.3 ****
+09:00:47 **** Incremental Build of configuration Debug for project lab2.2 ****
 make -j11 all 
 make: Nothing to be done for `all'.
-01:07:16 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-    944	   1104	   1088	   3136	    c40	lab1.3.elf
- 
-01:20:38 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-../src/main.s: Assembler messages:
-../src/main.s:27: Error: constant expression expected -- `sub R3,#7,R1'
-make: *** [src/main.o] Error 1
-01:23:15 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1000	   1104	   1088	   3192	    c78	lab1.3.elf
- 
-01:27:57 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1000	   1104	   1088	   3192	    c78	lab1.3.elf
- 
-22:42:10 **** Incremental Build of configuration Debug for project lab1.2 ****
+09:07:54 **** Incremental Build of configuration Debug for project lab2.2 ****
 make -j11 all 
 make: Nothing to be done for `all'.
-22:45:00 **** Incremental Build of configuration Debug for project lab1.1 ****
+09:14:58 **** Incremental Build of configuration Debug for project lab2.2 ****
 make -j11 all 
 Building file: ../src/main.s
 Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.1/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-../src/main.s: Assembler messages:
-../src/main.s:7: Error: junk at end of line, first unrecognized character is `A'
-make: *** [src/main.o] Error 1
-22:45:26 **** Incremental Build of configuration Debug for project lab1.1 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.1/Debug
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
 arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
 Finished building: ../src/main.s
  
-Building target: lab1.1.elf
+Building target: lab2.2.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.1.elf" @"objects.list"   -lm
-Finished building target: lab1.1.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
  
 /Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
 Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.1.elf" "lab1.1.bin"
-arm-none-eabi-size "lab1.1.elf"
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
    text	   data	    bss	    dec	    hex	filename
-    984	   1104	   1088	   3176	    c68	lab1.1.elf
+    968	   1240	   1088	   3296	    ce0	lab2.2.elf
  
-22:52:59 **** Incremental Build of configuration Debug for project lab1.2 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.2/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.2.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.2.elf" @"objects.list"   -lm
-Finished building target: lab1.2.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.2.elf" "lab1.2.bin"
-arm-none-eabi-size "lab1.2.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1016	   1088	   1088	   3192	    c78	lab1.2.elf
- 
-22:56:29 **** Incremental Build of configuration Debug for project lab1.2 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.2/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.2.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.2.elf" @"objects.list"   -lm
-Finished building target: lab1.2.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.2.elf" "lab1.2.bin"
-arm-none-eabi-size "lab1.2.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1016	   1088	   1088	   3192	    c78	lab1.2.elf
- 
-22:56:55 **** Incremental Build of configuration Debug for project lab1.2 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.2/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.2.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.2.elf" @"objects.list"   -lm
-Finished building target: lab1.2.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.2.elf" "lab1.2.bin"
-arm-none-eabi-size "lab1.2.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1016	   1088	   1088	   3192	    c78	lab1.2.elf
- 
-23:08:19 **** Incremental Build of configuration Debug for project lab1.3 ****
-make -j11 all 
-Building file: ../src/main.s
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab1.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
-Finished building: ../src/main.s
- 
-Building target: lab1.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
-Finished building target: lab1.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
-arm-none-eabi-size "lab1.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1000	   1104	   1088	   3192	    c78	lab1.3.elf
- 
-23:08:28 **** Incremental Build of configuration Debug for project lab1.3 ****
+09:15:05 **** Incremental Build of configuration Debug for project lab2.2 ****
 make -j11 all 
 make: Nothing to be done for `all'.
+09:15:57 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+    968	   1240	   1088	   3296	    ce0	lab2.2.elf
+ 
+09:22:23 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+    968	   1240	   1088	   3296	    ce0	lab2.2.elf
+ 
+09:27:42 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+    976	   1240	   1088	   3304	    ce8	lab2.2.elf
+ 
+09:35:04 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:30: Error: thumb conditional instruction should be in IT block -- `moveq R0,#0'
+../src/main.s:35: Error: thumb conditional instruction should be in IT block -- `pusheq {R2}'
+../src/main.s:39: Error: thumb conditional instruction should be in IT block -- `pusheq {R2}'
+make: *** [src/main.o] Error 1
+09:35:35 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1016	   1240	   1088	   3344	    d10	lab2.2.elf
+ 
+09:41:08 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:47: Error: ARM register expected -- `cmp msp,R0'
+../src/main.s:56: Error: ARM register expected -- `cmp msp,R0'
+make: *** [src/main.o] Error 1
+09:41:35 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1024	   1240	   1088	   3352	    d18	lab2.2.elf
+ 
+09:42:31 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1024	   1224	   1088	   3336	    d08	lab2.2.elf
+ 
+09:44:31 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:68: Error: thumb conditional instruction should be in IT block -- `movgt R0,#-1'
+../src/main.s:69: Error: thumb conditional instruction should be in IT block -- `moveq R0,#0'
+make: *** [src/main.o] Error 1
+09:44:45 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:68: Error: garbage following instruction -- `it GT,EQ'
+../src/main.s:69: Error: thumb conditional instruction should be in IT block -- `movgt R0,#-1'
+../src/main.s:70: Error: thumb conditional instruction should be in IT block -- `moveq R0,#0'
+make: *** [src/main.o] Error 1
+09:44:59 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1032	   1240	   1088	   3360	    d20	lab2.2.elf
+ 
+09:45:36 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1032	   1232	   1088	   3352	    d18	lab2.2.elf
+ 
+09:45:53 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+09:46:03 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+09:48:18 **** Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+09:49:32 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+09:50:20 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1032	   1232	   1088	   3352	    d18	lab2.2.elf
+ 
+09:50:42 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1032	   1224	   1088	   3344	    d10	lab2.2.elf
+ 
+09:51:02 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+09:55:28 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+src/main.o: In function `next':
+/Users/yagami/School/MicroProcessor/lab2.2/Debug/../src/main.s:56: undefined reference to `p2'
+collect2: error: ld returned 1 exit status
+make: *** [lab2.2.elf] Error 1
+09:56:05 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1240	   1088	   3368	    d28	lab2.2.elf
+ 
+09:56:14 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+10:01:20 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1224	   1088	   3352	    d18	lab2.2.elf
+ 
+10:01:40 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1224	   1088	   3352	    d18	lab2.2.elf
+ 
+10:01:52 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+10:02:58 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1224	   1088	   3352	    d18	lab2.2.elf
+ 
+10:03:06 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+10:03:22 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1224	   1088	   3352	    d18	lab2.2.elf
+ 
+10:03:36 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+10:06:13 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1224	   1088	   3352	    d18	lab2.2.elf
+ 
+10:06:20 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+10:07:05 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+10:09:40 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:11:01 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1224	   1088	   3352	    d18	lab2.2.elf
+ 
+21:13:42 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1224	   1088	   3352	    d18	lab2.2.elf
+ 
+21:13:58 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1232	   1088	   3360	    d20	lab2.2.elf
+ 
+21:14:16 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:14:25 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:23:13 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1232	   1088	   3360	    d20	lab2.2.elf
+ 
+21:24:42 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:25:54 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:29:59 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:31:00 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:32:57 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1232	   1088	   3360	    d20	lab2.2.elf
+ 
+21:33:12 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:35:12 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1232	   1088	   3360	    d20	lab2.2.elf
+ 
+21:35:55 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:37:38 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:39:57 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1232	   1088	   3360	    d20	lab2.2.elf
+ 
+21:40:38 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+make: Nothing to be done for `all'.
+21:41:02 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+../src/main.s: Assembler messages:
+../src/main.s:72: Error: incorrect condition in IT block -- `movne R0,#-1'
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+make: *** [src/main.o] Error 1
+21:41:13 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1232	   1088	   3360	    d20	lab2.2.elf
+ 
+21:41:59 **** Incremental Build of configuration Debug for project lab2.2 ****
+make -j11 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/yagami/School/MicroProcessor/lab2.2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab2.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2.2.elf" @"objects.list"   -lm
+Finished building target: lab2.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2.2.elf" "lab2.2.bin"
+arm-none-eabi-size "lab2.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1040	   1240	   1088	   3368	    d28	lab2.2.elf
+ 

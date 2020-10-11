@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/yagami/School/MicroProcessor/lab2.3"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item value="484" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="356" key="DIALOG_HEIGHT"/>
+		<item value="782" key="DIALOG_X_ORIGIN"/>
+		<item value="351" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>
