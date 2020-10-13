@@ -55,5 +55,5 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;&#10;"/>
 <stringAttribute key="process_factory_id" value="fr.ac6.mcu.debug.launching.MCUGdbProcessFactory"/>
-<stringAttribute key="saved_expressions&lt;seperator&gt;Unknown" value="536870933,536870912,0x20018000,0x20000008,0x20000004,536870908,0x20000000,0x20000088"/>
+<stringAttribute key="saved_expressions&lt;seperator&gt;Unknown" value="536870933,536870912,0x20018000,0x20000008,0x20000004,536870908,0x20000000,0x20000088,134218184,0,0x20000050,536871061"/>
 </launchConfiguration>

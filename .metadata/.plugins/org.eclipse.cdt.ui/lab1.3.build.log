@@ -1,16 +1,23 @@
-22:09:20 **** Incremental Build of configuration Debug for project lab1.3 ****
+14:09:47 **** Incremental Build of configuration Debug for project lab1.3 ****
 make -j11 all 
-../src/main.s: Assembler messages:
 Building file: ../src/main.s
-../src/main.s:54: Error: ARM register expected -- `mul R3,R3,#2'
 Invoking: MCU GCC Assembler
-../src/main.s:81: Error: garbage following instruction -- `it LT,GE'
-../src/main.s:82: Error: thumb conditional instruction should be in IT block -- `neglt R4,R4'
-../src/main.s:83: Error: thumb conditional instruction should be in IT block -- `movlt R5,R0'
-../src/main.s:84: Error: thumb conditional instruction should be in IT block -- `movge R5,R1'
-make: *** [src/main.o] Error 1
 /Users/yagami/School/MicroProcessor/lab1.3/Debug
 arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab1.3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab1.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.3.elf" @"objects.list"   -lm
+Finished building target: lab1.3.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab1.3.elf" "lab1.3.bin"
+arm-none-eabi-size "lab1.3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1000	   1104	   1088	   3192	    c78	lab1.3.elf
+ 
 
-22:09:20 Build Finished (took 164ms)
+14:09:47 Build Finished (took 195ms)
 

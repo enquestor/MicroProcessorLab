@@ -7,8 +7,8 @@
 
 .text
 .global main
-	.equ X, 0x55AA
-	.equ Y, 0xAA55
+	.equ X, 0xABCD
+	.equ Y, 0xEFAB
 
 main:
 	ldr R0, =X
