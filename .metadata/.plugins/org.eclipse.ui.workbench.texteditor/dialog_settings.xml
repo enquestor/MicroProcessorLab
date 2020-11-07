@@ -2,23 +2,29 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="main" key="selection"/>
+		<item value="SCAN" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="main"/>
-			<item value="main.s"/>
+			<item value="SCAN"/>
+			<item value="R4"/>
+			<item value="display"/>
+			<item value="GPIOC"/>
+			<item value="PUPDR"/>
+			<item value="R6"/>
+			<item value="R7"/>
+			<item value="div"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="292" key="DIALOG_WIDTH"/>
+		<item value="309" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
-		<item value="402" key="DIALOG_HEIGHT"/>
-		<item value="750" key="DIALOG_X_ORIGIN"/>
-		<item value="243" key="DIALOG_Y_ORIGIN"/>
+		<item value="412" key="DIALOG_HEIGHT"/>
+		<item value="1491" key="DIALOG_X_ORIGIN"/>
+		<item value="497" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -1,0 +1,17 @@
+extern void GPIO_init();
+extern void max7219_init();
+extern void max7219_send(unsigned char address, unsigned char data);
+
+int display(int data, int num_digs)
+{
+	return 0;
+}
+
+int main()
+{
+    int student_id = 0713407;
+    GPIO_init();
+    max7219_init();
+    display(student_id, 7);
+    return 0;
+}

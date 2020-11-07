@@ -1,0 +1,23 @@
+14:41:39 **** Incremental Build of configuration Debug for project lab5.2 ****
+make -j11 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/yagami/School/MicroProcessor/lab5.2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: lab5.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.2.elf" @"objects.list"   -lm
+Finished building target: lab5.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab5.2.elf" "lab5.2.bin"
+arm-none-eabi-size "lab5.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1624	   1152	   1088	   3864	    f18	lab5.2.elf
+ 
+
+14:41:40 Build Finished (took 177ms)
+
