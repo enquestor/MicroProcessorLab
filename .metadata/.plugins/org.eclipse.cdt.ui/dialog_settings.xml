@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<item value="/inc" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
 	<item value="false" key="LexicalSortingAction.sort"/>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item value="180" key="size.height"/>
+		<item value="563" key="size.width"/>
+	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="completion_proposal_size">

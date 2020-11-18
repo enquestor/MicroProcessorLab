@@ -1,197 +1,243 @@
-14:42:50 **** Build of configuration Debug for project lab5.3 ****
+11:56:19 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
-Building file: ../startup/startup_stm32.s
-Building file: ../startup/sysmem.c
-Building file: ../src/asm.s
 Building file: ../src/main.c
 Invoking: MCU GCC Compiler
-Invoking: MCU GCC Assembler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Assembler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/asm.o" "../src/asm.s"
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
+/Users/yagami/School/MicroProcessor/lab6.2/Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
-Finished building: ../src/asm.s
-Finished building: ../startup/startup_stm32.s
- 
- 
+In file included from ../src/stm32l476xx.h:184:0,
+                 from ../src/main.c:1:
+../src/core_cm4.h: In function 'NVIC_SystemReset':
+../src/core_cm4.h:1792:3: warning: implicit declaration of function '__DSB'; did you mean '__ASM'? [-Wimplicit-function-declaration]
+   __DSB();                                                          /* Ensure all outstanding memory accesses included
+   ^~~~~
+   __ASM
+../src/core_cm4.h:1801:5: warning: implicit declaration of function '__NOP'; did you mean '__IOM'? [-Wimplicit-function-declaration]
+     __NOP();
+     ^~~~~
+     __IOM
+../src/main.c: In function 'main':
+../src/main.c:71:12: warning: unused variable 'TARGET_MSEC' [-Wunused-variable]
+  const int TARGET_MSEC = TIME_SEC * 100 - ( TARGET_SEC * 100 );
+            ^~~~~~~~~~~
 Finished building: ../src/main.c
  
-Finished building: ../startup/sysmem.c
- 
-Building target: lab5.3.elf
+Building target: lab6.2.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.3.elf" @"objects.list"   -lm
-Finished building target: lab5.3.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab6.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab6.2.elf" @"objects.list"   -lm
+Finished building target: lab6.2.elf
  
 /Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
 Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab5.3.elf" "lab5.3.bin"
-arm-none-eabi-size "lab5.3.elf"
+arm-none-eabi-objcopy -O binary "lab6.2.elf" "lab6.2.bin"
+arm-none-eabi-size "lab6.2.elf"
    text	   data	    bss	    dec	    hex	filename
-   1624	   1152	   1088	   3864	    f18	lab5.3.elf
+   2424	   1088	   1088	   4600	   11f8	lab6.2.elf
  
-14:42:53 **** Incremental Build of configuration Debug for project lab5.3 ****
+11:56:22 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
 make: Nothing to be done for `all'.
-14:43:51 **** Incremental Build of configuration Debug for project lab5.3 ****
-make -j11 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'keypad_scan':
-../src/main.c:79:6: error: 'pressed' undeclared (first use in this function); did you mean 'pressed_at'?
-   if(pressed == -1)
-      ^~~~~~~
-      pressed_at
-../src/main.c:79:6: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/main.o] Error 1
-14:44:35 **** Incremental Build of configuration Debug for project lab5.3 ****
-make -j11 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: lab5.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.3.elf" @"objects.list"   -lm
-Finished building target: lab5.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab5.3.elf" "lab5.3.bin"
-arm-none-eabi-size "lab5.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1632	   1152	   1088	   3872	    f20	lab5.3.elf
- 
-14:46:42 **** Incremental Build of configuration Debug for project lab5.3 ****
-make -j11 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: lab5.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.3.elf" @"objects.list"   -lm
-Finished building target: lab5.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab5.3.elf" "lab5.3.bin"
-arm-none-eabi-size "lab5.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1624	   1152	   1088	   3864	    f18	lab5.3.elf
- 
-15:49:28 **** Incremental Build of configuration Debug for project lab5.3 ****
-make -j11 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: lab5.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.3.elf" @"objects.list"   -lm
-Finished building target: lab5.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab5.3.elf" "lab5.3.bin"
-arm-none-eabi-size "lab5.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1656	   1152	   1088	   3896	    f38	lab5.3.elf
- 
-15:49:43 **** Incremental Build of configuration Debug for project lab5.3 ****
-make -j11 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: lab5.3.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.3.elf" @"objects.list"   -lm
-Finished building target: lab5.3.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab5.3.elf" "lab5.3.bin"
-arm-none-eabi-size "lab5.3.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1664	   1152	   1088	   3904	    f40	lab5.3.elf
- 
-15:49:51 **** Incremental Build of configuration Debug for project lab5.3 ****
+11:59:38 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
 make: Nothing to be done for `all'.
-15:50:56 **** Incremental Build of configuration Debug for project lab5.3 ****
+11:59:57 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
 Building file: ../src/main.c
 Invoking: MCU GCC Compiler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
+/Users/yagami/School/MicroProcessor/lab6.2/Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'pressed_at':
-../src/main.c:62:6: warning: variable 't' set but not used [-Wunused-but-set-variable]
-  int t;
-      ^
+In file included from ../src/stm32l476xx.h:184:0,
+                 from ../src/main.c:1:
+../src/core_cm4.h: In function 'NVIC_SystemReset':
+../src/core_cm4.h:1792:3: warning: implicit declaration of function '__DSB'; did you mean '__ASM'? [-Wimplicit-function-declaration]
+   __DSB();                                                          /* Ensure all outstanding memory accesses included
+   ^~~~~
+   __ASM
+../src/core_cm4.h:1801:5: warning: implicit declaration of function '__NOP'; did you mean '__IOM'? [-Wimplicit-function-declaration]
+     __NOP();
+     ^~~~~
+     __IOM
+../src/main.c: In function 'main':
+../src/main.c:72:12: warning: unused variable 'TARGET_MSEC' [-Wunused-variable]
+  const int TARGET_MSEC = TIME_SEC * 100 - ( TARGET_SEC * 100 );
+            ^~~~~~~~~~~
 Finished building: ../src/main.c
  
-Building target: lab5.3.elf
+Building target: lab6.2.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.3.elf" @"objects.list"   -lm
-Finished building target: lab5.3.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab6.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab6.2.elf" @"objects.list"   -lm
+Finished building target: lab6.2.elf
  
 /Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
 Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab5.3.elf" "lab5.3.bin"
-arm-none-eabi-size "lab5.3.elf"
+arm-none-eabi-objcopy -O binary "lab6.2.elf" "lab6.2.bin"
+arm-none-eabi-size "lab6.2.elf"
    text	   data	    bss	    dec	    hex	filename
-   1672	   1152	   1088	   3912	    f48	lab5.3.elf
+   2440	   1088	   1088	   4616	   1208	lab6.2.elf
  
-15:55:57 **** Incremental Build of configuration Debug for project lab5.3 ****
+12:00:08 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
 Building file: ../src/main.c
 Invoking: MCU GCC Compiler
-/Users/yagami/School/MicroProcessor/lab5.3/Debug
+/Users/yagami/School/MicroProcessor/lab6.2/Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'pressed_at':
-../src/main.c:62:6: warning: variable 't' set but not used [-Wunused-but-set-variable]
-  int t;
-      ^
+In file included from ../src/stm32l476xx.h:184:0,
+                 from ../src/main.c:1:
+../src/core_cm4.h: In function 'NVIC_SystemReset':
+../src/core_cm4.h:1792:3: warning: implicit declaration of function '__DSB'; did you mean '__ASM'? [-Wimplicit-function-declaration]
+   __DSB();                                                          /* Ensure all outstanding memory accesses included
+   ^~~~~
+   __ASM
+../src/core_cm4.h:1801:5: warning: implicit declaration of function '__NOP'; did you mean '__IOM'? [-Wimplicit-function-declaration]
+     __NOP();
+     ^~~~~
+     __IOM
+../src/main.c: In function 'main':
+../src/main.c:72:12: warning: unused variable 'TARGET_MSEC' [-Wunused-variable]
+  const int TARGET_MSEC = TIME_SEC * 100 - ( TARGET_SEC * 100 );
+            ^~~~~~~~~~~
 Finished building: ../src/main.c
  
-Building target: lab5.3.elf
+Building target: lab6.2.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab5.3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab5.3.elf" @"objects.list"   -lm
-Finished building target: lab5.3.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab6.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab6.2.elf" @"objects.list"   -lm
+Finished building target: lab6.2.elf
  
 /Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
 Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "lab5.3.elf" "lab5.3.bin"
-arm-none-eabi-size "lab5.3.elf"
+arm-none-eabi-objcopy -O binary "lab6.2.elf" "lab6.2.bin"
+arm-none-eabi-size "lab6.2.elf"
    text	   data	    bss	    dec	    hex	filename
-   1680	   1152	   1088	   3920	    f50	lab5.3.elf
+   2440	   1088	   1088	   4616	   1208	lab6.2.elf
  
-19:57:50 **** Incremental Build of configuration Debug for project lab5.3 ****
+12:00:20 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
-make: Nothing to be done for `all'.
-19:57:53 **** Incremental Build of configuration Debug for project lab5.3 ****
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/yagami/School/MicroProcessor/lab6.2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/stm32l476xx.h:184:0,
+                 from ../src/main.c:1:
+../src/core_cm4.h: In function 'NVIC_SystemReset':
+../src/core_cm4.h:1792:3: warning: implicit declaration of function '__DSB'; did you mean '__ASM'? [-Wimplicit-function-declaration]
+   __DSB();                                                          /* Ensure all outstanding memory accesses included
+   ^~~~~
+   __ASM
+../src/core_cm4.h:1801:5: warning: implicit declaration of function '__NOP'; did you mean '__IOM'? [-Wimplicit-function-declaration]
+     __NOP();
+     ^~~~~
+     __IOM
+../src/main.c: In function 'main':
+../src/main.c:72:12: warning: unused variable 'TARGET_MSEC' [-Wunused-variable]
+  const int TARGET_MSEC = TIME_SEC * 100 - ( TARGET_SEC * 100 );
+            ^~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lab6.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab6.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab6.2.elf" @"objects.list"   -lm
+Finished building target: lab6.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab6.2.elf" "lab6.2.bin"
+arm-none-eabi-size "lab6.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2440	   1088	   1088	   4616	   1208	lab6.2.elf
+ 
+12:04:49 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
-make: Nothing to be done for `all'.
-20:04:56 **** Incremental Build of configuration Debug for project lab5.3 ****
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/yagami/School/MicroProcessor/lab6.2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/stm32l476xx.h:184:0,
+                 from ../src/main.c:1:
+../src/core_cm4.h: In function 'NVIC_SystemReset':
+../src/core_cm4.h:1792:3: warning: implicit declaration of function '__DSB'; did you mean '__ASM'? [-Wimplicit-function-declaration]
+   __DSB();                                                          /* Ensure all outstanding memory accesses included
+   ^~~~~
+   __ASM
+../src/core_cm4.h:1801:5: warning: implicit declaration of function '__NOP'; did you mean '__IOM'? [-Wimplicit-function-declaration]
+     __NOP();
+     ^~~~~
+     __IOM
+../src/main.c: In function 'main':
+../src/main.c:70:12: warning: unused variable 'TARGET_MSEC' [-Wunused-variable]
+  const int TARGET_MSEC = TIME_SEC * 100 - ( TARGET_SEC * 100 );
+            ^~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lab6.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab6.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab6.2.elf" @"objects.list"   -lm
+Finished building target: lab6.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab6.2.elf" "lab6.2.bin"
+arm-none-eabi-size "lab6.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2616	   1088	   1088	   4792	   12b8	lab6.2.elf
+ 
+12:05:45 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
-make: Nothing to be done for `all'.
-20:15:20 **** Incremental Build of configuration Debug for project lab5.3 ****
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/yagami/School/MicroProcessor/lab6.2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/stm32l476xx.h:184:0,
+                 from ../src/main.c:1:
+../src/core_cm4.h: In function 'NVIC_SystemReset':
+../src/core_cm4.h:1792:3: warning: implicit declaration of function '__DSB'; did you mean '__ASM'? [-Wimplicit-function-declaration]
+   __DSB();                                                          /* Ensure all outstanding memory accesses included
+   ^~~~~
+   __ASM
+../src/core_cm4.h:1801:5: warning: implicit declaration of function '__NOP'; did you mean '__IOM'? [-Wimplicit-function-declaration]
+     __NOP();
+     ^~~~~
+     __IOM
+Finished building: ../src/main.c
+ 
+Building target: lab6.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab6.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab6.2.elf" @"objects.list"   -lm
+Finished building target: lab6.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab6.2.elf" "lab6.2.bin"
+arm-none-eabi-size "lab6.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2640	   1088	   1088	   4816	   12d0	lab6.2.elf
+ 
+12:06:22 **** Incremental Build of configuration Debug for project lab6.2 ****
 make -j11 all 
-make: Nothing to be done for `all'.
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/yagami/School/MicroProcessor/lab6.2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/stm32l476xx.h:184:0,
+                 from ../src/main.c:1:
+../src/core_cm4.h: In function 'NVIC_SystemReset':
+../src/core_cm4.h:1792:3: warning: implicit declaration of function '__DSB'; did you mean '__ASM'? [-Wimplicit-function-declaration]
+   __DSB();                                                          /* Ensure all outstanding memory accesses included
+   ^~~~~
+   __ASM
+../src/core_cm4.h:1801:5: warning: implicit declaration of function '__NOP'; did you mean '__IOM'? [-Wimplicit-function-declaration]
+     __NOP();
+     ^~~~~
+     __IOM
+Finished building: ../src/main.c
+ 
+Building target: lab6.2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/yagami/School/MicroProcessor/lab6.2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab6.2.elf" @"objects.list"   -lm
+Finished building target: lab6.2.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab6.2.elf" "lab6.2.bin"
+arm-none-eabi-size "lab6.2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2648	   1088	   1088	   4824	   12d8	lab6.2.elf
+ 

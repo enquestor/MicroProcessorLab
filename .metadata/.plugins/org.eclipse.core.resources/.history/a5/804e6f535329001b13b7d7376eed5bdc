@@ -1,0 +1,90 @@
+#include "stm32l476xx.h"
+#define TIME_SEC 2.34
+
+extern void max7219_init();
+extern void max7219_send(unsigned char address, unsigned char data);
+
+void Timer_init( TIM_TypeDef *timer)
+{
+    RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; //turn on the timer2
+    timer->CR1 &= 0x0000; //Turned on the counter as the count up mode
+    timer->PSC = 39999U;  //prescaler, how many counter clock cycle I have to update my counter
+    timer->ARR = 99U; //how much counter to do in one second, 0 is included so use 99 rather than 100
+    //the formula is now on 4MHz = (39999+1)*(99+1) = 40000*100= 400w = 4MHz
+    timer->EGR = 0x0001;  //re-initailzie timer to startup
+    /*
+    Bit 0 UG: Update generation
+    This bit can be set by software, it is automatically cleared by hardware.
+    0: No action
+    1: Re-initialize the counter and generates an update of the registers. Note that the prescaler
+    counter is cleared too (anyway the prescaler ratio is not affected). The counter is cleared if
+    the center-aligned mode is selected or if DIR=0 (upcounting), else it takes the auto-reload
+    value (TIMx_ARR) if DIR=1 (downcounting).
+    */
+    //counter will be incremented by one symbolize the millisecond
+    //1 millisecond is 40000/4000000 = 1/100, so each 40000 clock cycle, increse the counter by one
+    //the time precision should be 0.01sec, so set the arr be 99 which means a second should be divieded into 100 parts
+}
+
+void Timer_start(TIM_TypeDef *timer)
+{
+    //enable the counter
+	timer->CR1 |= TIM_CR1_CEN; //Turn on the counter mode, change in the control register
+	timer->SR &= ~(TIM_SR_UIF); //off the user interrupt mode, so the cpu can keep working on the clock increment
+}
+
+void GPIO_init()
+{
+	RCC->AHB2ENR   |= 0b00000000000000000000000000000100;
+
+	// PC max7219
+	GPIOC->MODER   &= 0b11111111111111111111111111000000; // clear right 6 bits
+	GPIOC->MODER   |= 0b00000000000000000000000000010101; // set PC to output for max7219
+}
+
+void display(int m, int s)
+{
+	int i;
+	for(i = 1; i <= 2; i++)
+	{
+		max7219_send(i, s % 10);
+		s /= 10;
+	}
+
+	max7219_send(i++, (m % 10) | 0x80);
+	m /= 10;
+
+	for(; m > 0; i++)
+	{
+		max7219_send(i, m % 10);
+		m /= 10;
+	}
+
+	for(; i<=8; i++)
+		max7219_send(i, 0xF);
+}
+
+int main()
+{
+	const int TARGET_SEC = TIME_SEC / 1;
+	const int TARGET_MSEC = TIME_SEC * 100 - ( TARGET_SEC * 100 );
+	int s = 0, ms = 0;
+
+	GPIO_init();
+	max7219_init();
+
+	Timer_init(TIM2);
+	Timer_start(TIM2);
+
+	while(1)
+	{
+		if(TIM2->SR & 1)
+		{
+			++s;
+			TIM2->SR &= ~(TIM_SR_UIF);
+		}
+		ms = TIM2->CNT;
+		display(s, ms);
+	}
+    return 0;
+}
